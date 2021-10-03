@@ -7,7 +7,8 @@
 Assignment|Info|Solution
 --:|--:|--:
 Compilation Pipeline  |  [A1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/compilation-pipeline/) |[S1](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn1)
-Core C  |  [A2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/core-c-control-structures-variables-scope-and-uninitialized-memory/) |  [S1](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn2)
+Core C  |  [A2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/core-c-control-structures-variables-scope-and-uninitialized-memory/) |  [S2](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn2)
+C Memory Management  | [A3](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-memory-management/) |  [S3]()
 
 
 
