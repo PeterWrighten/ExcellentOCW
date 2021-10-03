@@ -103,6 +103,8 @@ Link: ```gcc -o prog main.o main.o```
 >What's the meaning of 'gcc -Wall'?
 >> -Wall: This will check not only for errors but also for all kinds warning like unused variables errors, it is good practice to use this flag while compiling the code.
 
+>[gcc command in Linux with examples](https://www.geeksforgeeks.org/gcc-command-in-linux-with-examples/)
+
 **Lecture 1 END**
 
 ### Lecture 2:
