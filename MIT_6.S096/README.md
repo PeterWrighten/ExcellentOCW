@@ -65,7 +65,7 @@ You can only use what is declared above.
 
 >> Even couldn't work it out in interpreted language.
 
-#### Summary
+#### **Summary**
 
 Preprocess: ```gcc -E main.c```
 >```main.c``` => Format txt
@@ -75,6 +75,30 @@ Compile: ```gcc -c main.c main.c```
 
 Link: ```gcc -o prog main.o main.o```
 >```main.o``` => prog
+
+#### **MEMO About Assignment**
+
+> What does #ifdef mean?
+>>In C, the #ifdef directively allows for conditional compilation. The preprocessor determines if the provided macro exists before including the subsequent code in the compilation process.
+
+>In Problem1, it's just a simple problem to search indent error, but in Problem 2, we should use the Macro to implement both 'fibonacci' and 'reverse' ether.
+>>So what is Macro?\
+>>Let's take a example first:\
+>>```#define PI 3.1415926``` is seemed as a parameterized Macro.\
+>>\
+>>So I think now you have had some concepts about what Macro is.\
+>>Macro: A macro (short for "macro instruction", from Greek combining form μακρο- "long, large") in computer science is a rule or pattern that specifies how a certain input should be mapped to a replacement output. Applying a macro to an input is macro expansion.
+
+>Problem1
+>>```
+>>$ gcc -Wall -std=c99 xxx.c -o xxx
+>>```
+
+>Proble2
+>>```
+>>$ gcc -Wall -std=c99 DXXX xxx.c -o xxx
+>>```
+>>[What's an object file in C?](https://newbedev.com/what-s-an-object-file-in-c)
 
 **Lecture 1 END**
 
