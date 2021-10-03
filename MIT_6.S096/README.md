@@ -7,6 +7,7 @@
 Assignment|Info|Solution
 --:|--:|--:
 Compilation Pipeline  |  [A1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/compilation-pipeline/) |[S1](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn1)
+Core C  |  [A2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/core-c-control-structures-variables-scope-and-uninitialized-memory/) |  [S1]
 
 
 
@@ -107,4 +108,143 @@ Link: ```gcc -o prog main.o main.o```
 
 **Lecture 1 END**
 
-### Lecture 2:
+### Lecture 2: [Core C: Control Structures, Variables, Scope, and Uninitialized Memory](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/core-c-control-structures-variables-scope-and-uninitialized-memory/)
+
+**Basic Control Structure**
+
+such as ```while```, ```for``` and so on.
+
+i.e.
+```C
+int i = 1;
+while( i ++ < 3 ){
+    printf("%d\n",i);
+    }
+```
+Empty for loop is an "infinite" while.
+
+```C
+while(1) == for()
+```
+
+**switch syntax:**
+
+```switch``` syntax is similar with multiple if loop.
+
+i.e.:
+
+```C
+switch(i){
+  case 1:
+     printf("This is one");
+     break;
+  case 2:
+     printf("This is two");
+     break;
+  case 3:
+     printf("This is three");
+     break;
+  default:
+     printf("It's something else!");
+ }
+```
+The above is similar with:
+
+```C
+if(i == 1){
+    printf("This is one");
+}else if(i == 2){
+    printf("This is two");
+}...
+```
+**Jump Syntax:**
+
+```C
+use continue, break, goto, and label
+```
+
+* Target label must be in the same function.
+* Notorious for creating hard-to-read code.
+
+```int``` is variable, ```const int``` is const.
+
+Declaration ```static int``` retains the variable for the lifetime of program.
+
+It is not similar with pointer.
+
+i.e.:
+
+Case 1: use pointer:
+
+```C
+typedef struct{
+    int x;
+    int y;
+}POINT;
+
+POINT p2(POINT *p1, int dx, int dy){
+    p2->x = p1->x + dx;
+    p2->y = p1->y + dy;
+}
+```
+
+Case 2: use static int:
+
+```C
+typedef struct{
+    static int x;
+    static int y;
+}POINT;
+
+POINT p2(POINT p1, int dx, int dy){
+    p1.x = p1.x + dx;
+    p1.x = p1.x + dy;
+}
+```
+
+because the static data couldn't exist in anonymous struct.
+
+#### **Scope**
+
+i.e.:
+
+```C
+void bar(){
+    int a = 0;
+    if(3 > 0){
+        int b = 0;
+        b = 2;
+    }
+    a++:
+    b++;
+}
+
+void foo(){
+    int a = 0;
+}
+```
+
+>a is "in  scope" for entire function, b is only "in scope" in ```bar``` 's if statement.
+
+**Anonymous Blocks**
+
+It demonstrates the concept of "block scope".
+
+i.e.:
+```C
+void foo(){
+    {int a = 0;}
+    {
+        double a = 3.14;
+         {
+             char * a = "3.14";
+    }
+}  //no 'a' define in this scope.
+}
+```
+
+
+
+
+
+**Lecture 2 END**
