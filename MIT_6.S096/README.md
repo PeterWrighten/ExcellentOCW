@@ -68,13 +68,13 @@ You can only use what is declared above.
 #### **Summary**
 
 Preprocess: ```gcc -E main.c```
->```main.c``` => Format txt
+>```main.c``` => ```Format txt```
 
 Compile: ```gcc -c main.c main.c```
->```main.c``` => main.o/Function.o
+>```main.c``` => ```main.o/Function.o```
 
 Link: ```gcc -o prog main.o main.o```
->```main.o``` => prog
+>```main.o``` => ```prog```
 
 #### **MEMO About Assignment**
 
