@@ -249,3 +249,105 @@ void foo(){
 
 
 **Lecture 2 END**
+
+### Lecture 3: [C Memory Management](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-memory-management/)
+
+#### Computer Memory
+
+**Heap**
+
+```Def``` : Heap is a chunk of memory that users can use to dynamically allocated memory.
+
+* Lasts until freed, or program exits.
+
+**Stack**
+
+```Def``` : Stack contains local variables from functions and related book-keeping data. LIFO Structure.
+
+* Function variables are pushed onto stack when called.
+* Functions variables are poped off stack when return.
+
+Show memory layout:
+Stack|
+--:|
+   |
+**Heap**|
+**BSS**(Uninitialized)|
+**Data**(Initialized)|
+**Text**(Code)|
+
+Book-keeping: memo where the called function's variables are from.
+
+**Example**
+
+Operate|
+--:|
+**Local Variables** |
+**main()~~[Previou Function]~~ Book-keeping**|
+**int i (DS()~~[Present Function]~~ Arg)** |
+**--Higher Address--**|
+
+#### Pointers and Address
+
+**Address**
+
+Each variable represents a n address in memory.
+
+```C
+ &A = Address of 'A'
+ ```
+
+ **Pointers**
+
+ A variable points to Address.
+
+ >Because address is also int, so ```char **ptr``` is allowed.
+
+ >Can do math with Pointers
+
+ ```C
+char *ptr;
+ptr + 1 <-- Next address of which ptr points
+ ```
+
+ #### Array
+
+**Array is really a chunk of memory!!**
+
+C style Array <-- statically allocated
+
+**Array variables are pointers to the array start**
+
+```C
+char *ptr;
+char str[10];
+ptr = str; // means ptr = &str[0];
+```
+
+**Array indexing is same as dereferencing after pointer addition**
+
+```C
+str[1]= 'a'; // means *(str + 1) = 'a';
+```
+
+**C Style Strings**
+
+> ```#include<string.h>``` is necessary
+
+>No String type in C language. C string is interpreted as a null-terminated char array(The last char is '\0')
+
+```C
+char str[] = "abc"; <-- String literal use "". Compiler converts literals to char array.
+```
+
+>Char array can be larger than string.
+
+**Special chars**
+
+* \\ backslash
+* \'
+* \"
+* \n new line
+* \t tab
+* \b backspace
+* \r Enter(carriage return)
