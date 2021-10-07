@@ -350,3 +350,50 @@ char str[] = "abc"; <-- String literal use "". Compiler converts literals to cha
 * \t tab
 * \b backspace
 * \r Enter(carriage return)
+
+```C
+char *strcpy(chr *dest, const char *source);
+strcpy(str, "hakuna");
+
+```
+
+#### Dynamic Allocation
+
+>```#include<stdio.h>``` is necessary.
+
+* ```sizeof('Datatype')``` returns number of byte of a datatype.
+* ```malloc/realloc``` finds a specified amount of free memory and returns a void pointer.
+
+```C
+char *ptr = malloc(sizeof(int)*3);
+strcpy(str, "hi");
+
+str = realloc(str, sizeof(char)*6);
+strcpy(str, "hello");
+```
+>```realloc()``` could only use to allocate existed malloced ptr.
+
+>```free()``` would freed the allocated Address
+
+**Dynamically Allocated Array**
+
+>**!!** in C, you are not allowed define an array without declaring arraysize, but use following method you could do it.
+
+Allow you to avoid declaring array size at declaration.
+
+```C
+int *dynamic_array;
+dynamic_array = malloc(sizeof(int)*10);
+dynamic_array[0] = 1; //now points to an array
+```
+
+#### Summary
+
+1. Memory has stack and Heap
+2. Pointers and addresses access Memory
+3. Arrays are really chunks of memory. Strings are null-terminated char arrays(```const char; char[] = ""```).
+4. C allows user memory allocation. Use malloc, relloc and free.
+
+**Lecture3 END**
+
+### Lecture 4:
