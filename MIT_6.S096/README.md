@@ -270,7 +270,6 @@ void foo(){
 Show memory layout:
 Stack|
 --:|
-   |
 **Heap**|
 **BSS**(Uninitialized)|
 **Data**(Initialized)|
