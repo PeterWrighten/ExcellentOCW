@@ -572,3 +572,132 @@ struct foo * bar = new struct foo;
 * Lets programmers define behavior for your own data.
 
 **Constructors and Destructors**
+
+* This destructor should have fit on the last slide
+* Since we explicitly allocated something with new, we must also explicitly de-allocate it.
+
+```cpp
+// destructor
+class Rectangle{
+public:
+    int w;
+    int h;
+    Rectangle(int w, int h);
+    ~Rectangle();
+
+}
+// ignore defining Rectangle()
+Rectangle::~Rectangle(){
+    delete width;
+    delete height;
+}
+```
+
+* Rectangle itself is automatically deallocated when it goes out of scope.
+
+
+**Templates**
+
+* Syntax for making code more flexible.
+* Similar in spirit to JAVA's generics.
+* Applied at compile-time, like C macros.
+* Can be applied to classes, functions.
+
+Class Example:
+
+```cpp
+#include<stdio.h>
+
+class Rectangle{
+    int *width;
+    int *height;
+
+public:
+    Rectangle(int, int);
+    ~Rectangle();
+    void printMe(){
+        printf("Dimensions: %d by %d. \n", *width, *height);
+    }
+};
+Rectangle::Rectangle(int w, int h){
+    width = new int;
+    height = new int;
+    *width = w;
+    *height = h;
+}
+```
+
+
+
+#### About Class
+
+class is a object in cpp. It is the essence of Object-Oriented Programming.
+
+```cpp
+class Name{
+public: //Access specifier, "private", "protected" are also available.
+    datatype variables;
+
+    constructor_name();
+    ~constructure_name();//destructor, it is trival here because system would generate it defaultly.
+    memberFunction();
+
+};
+
+Name::constructor_name(){
+    //define constructor here
+}
+```
+
+You could define ``` memberFunction()``` in ```class```, or use ```::``` (scope resolution operator) to define it outside ```class```.
+
+**Access specifier**
+
+```public```: No limit
+
+```private```: only available in class and friend class.
+
+```protected```: could access in derived class.
+
+```cpp
+#include<iostream>
+class Box{
+protected:
+    double width;
+};
+
+class smallBox:Box{
+public:
+    void setSmallWidth(double width);
+};
+
+int main(){
+    smallBox box;
+    box.setSmallWidth(5.0);
+    cout<<"Width of box:"<<box.setSmallWidth(5.0)<<endl;
+    return 0;
+}
+```
+
+**Constructor and Destructor**
+
+* has the same name of class.
+* constructor would be implemented automatically when declare the class.
+* Constructor could be substituted parameters.
+
+```cpp
+class Line{
+public:
+    double len;
+    line(double len);
+    ~line();
+private:
+    double length;
+
+};
+
+Line::line(double len):length(len){// that means length = len;
+    cout<<"Object is created, length = "<<len<<endl;
+}
+
+```
