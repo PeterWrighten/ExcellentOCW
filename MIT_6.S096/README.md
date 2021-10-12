@@ -397,3 +397,178 @@ dynamic_array[0] = 1; //now points to an array
 **Lecture3 END**
 
 ### Lecture 4:[Data Structures, Debugging](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/data-structures-debugging/)
+
+**Memory Leaks and Valgrind Tool**
+
+Memory leaks
+
+> allocated memory that's not freed.
+
+Valgrind
+
+>A memory profiling tool. Helps you find memory leaks.
+
+Compile with debug mode:
+
+```C
+$ gcc -g helloworld.c -o helloworld
+```
+
+Include tools such as memcheck, cachegrind, callgrind....
+
+* Command line:
+
+```C
+$ valgrind --tool=tool_name ./program_name
+
+Ex:
+
+$ valgrind --tool=memcheck ./hello_world
+```
+
+**Structs and union**
+
+C has no Objects, but has data structures that can help fill in roles. Only contains data.
+
+>I had known and understood Structs, so I skipped this part.
+
+**!!**
+* Struct size != sum of member sizes
+* All members (struct size) must "align" with largest member size.
+i.e.:
+
+```C
+struct x{
+    char a;// 1-byte, must be 1-byte aligned
+    short b;//2-byte, must be 2-byte aligned
+    int c;//Biggest member 4-byte. So X must be 4-byte aligned.
+}
+```
+
+**Unions**
+
+Can only access one member at a time. Union stores all data in same chunk of memory.
+
+So union always use with struct together.
+
+```C
+struct student{
+    union grade{
+        int percentage;
+        char letter;
+    };
+    int switcher;//if switcher = 0, represents percentage grade; if = 1; represents letter grade.
+}
+struct student frank;
+frank.grade.letter = 'B';
+frank.switcher = 1;
+```
+
+**Opaque Types**
+
+Type exposed via pointers where definition can still change.
+
+Ex:Can change struct person definition in test.c without recompiling my_file.c
+
+**Enum and Typedef**
+
+Define own variable type with a set of int values
+
+```C
+enum week{Mon, Tue, Wed};
+
+enum week day;
+
+day = Wed;
+
+printf("%d",day);
+
+Output: 2
+```
+
+Why use Enum?
+
+Like a #define variable but is actually a C element.
+```C
+#define NORTH 0
+#define EAST 1
+#define SOUTH 2
+#define WEST 3
+int direction = SOUTH;
+//Compiler sees:
+//int direction = 2
+```
+
+```C
+enum dir_t{
+NORTH,
+EAST,
+SOUTH,
+WEST
+};
+typedef enum dir_t dir_t;
+
+dir_t direction = SOUTH;
+
+```
+
+**GDB Debugging Tool**
+
+Compile with -g flag(Debug mode)
+
+```C
+gcc -g hello.c -o hello
+
+gcc -ggdb3 hello.c -o hello
+```
+
+Commandline debugger:
+
+```C
+$ gdb ./prog_name
+```
+
+**GDB Commands**
+
+* q/quit
+* r/run
+* b/break(filename:)linenumber :crfeate a breakpoint
+* s/step:execute next line
+* c/continue: continue execution
+* p variable: print current value of Variables
+* bt: print stack trace.
+
+**Lecture 4 END**
+
+### Lecture 5: [C++ Introduction, Classes and Templates](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-introduction-classes-and-templates/)
+
+**C++**
+
+* Objected-oriented(but later than Simula, Smalltalk)
+* 1983
+* Like C, but introduces real objects and classes
+
+>g++(C++ compiler)
+
+```C
+$ g++ -o test test.cpp
+```
+
+**New Memory management**
+
+* The new operator allocates space on the heap
+* new and delete take the place of malloc(sizeof()) and free().
+
+```cpp
+int *numArray = new int[100];
+delete numArray;
+struct foo * bar = new struct foo;
+```
+
+**Classes**
+
+* Modularity
+* Objects(data + behavior)
+* Lets programmers define behavior for your own data.
+
+**Constructors and Destructors**
