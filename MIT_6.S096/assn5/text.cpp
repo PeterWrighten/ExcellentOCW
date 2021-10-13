@@ -6,9 +6,9 @@ public:
     int h;
     Box(int w, int h);
 	~Box();
-	
+
 };
 
 Box::Box(int w, int h){
-	w * h =
+	w * h = 
 }
