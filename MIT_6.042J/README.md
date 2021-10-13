@@ -9,7 +9,7 @@ Lecture Note|Assignments
 
 # Note
 
-## Lecture 1 & 2: Proofs and Induction
+## Lecture 1 & 2 & 3: Proofs and Induction
 
 
 ![Proofs](https://github.com/PeterWrighten/MarkDown_Photo/blob/main/Note/Proof.jpg)
@@ -28,7 +28,7 @@ A --> F(Induction) --> G(Base Induction + Induction)
 F --> H(Strong Induction)
 ```
 
-## Lecture 3 & 4: NumberTheory and Cryptography
+## Lecture 4 & 5: NumberTheory and Cryptography
 
 ![NT](https://github.com/PeterWrighten/MarkDown_Photo/blob/main/Note/NT.jpg)
 
