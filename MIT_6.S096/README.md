@@ -701,3 +701,74 @@ Line::line(double len):length(len){// that means length = len;
 }
 
 ```
+
+**Templates**
+
+* Syntax for making code more flexible.
+* Similar in spirit to JAVA's generics.
+* Applied at compile-time, like C macros(the preprocessor)
+* Can be applied to classes, functions.
+* Trivia: language of templates is turing complete.
+
+**About Template**
+
+* Function Templates
+* Class Templates
+
+Q1: What is namespace?
+
+A:
+```cpp
+#include<iostream>
+using namespace std;//This is point;
+
+```
+because variables are defined in std namespace of iostream.h header file.
+
+***********************
+
+```cpp
+template<class typeParam>
+typeParam max(typeParam a, typeParam b){
+    return(a > b ? a : b);
+}
+
+int main(){
+    int a = 3, b = 7;
+    double c = 5.5, d = 1.5;
+    printf("%d\n",max(a, b));
+    printf("%f\n",max(c, d));
+}
+
+```
+function template is used for definition of unknown datatype functions.
+
+```cpp
+template<class T>
+
+class mypair{
+public:
+    T a, b;
+    mypair(T first, T second){
+        a = first;
+        b = second;
+    }
+    T getmax();
+};
+T mypair<T>::getmax(){
+    return a > b ? a : b;
+
+int main(){
+    mypair<int> myints;
+    printf("%d\n",myints.getmax());
+}
+}
+```
+**Class could also be instead of "typename"**
+
+':' after constructor --> Initialize variables
+
+**Lecture 5 END**
+
+
+### Lecture 6: [C++ Inheritance](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-inheritance/)
