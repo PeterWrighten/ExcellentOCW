@@ -772,3 +772,52 @@ int main(){
 
 
 ### Lecture 6: [C++ Inheritance](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-inheritance/)
+
+**Review**
+
+```Struct``` => Independent Memory space [parallel]
+
+```Union``` => The same memory space used together [tile]
+
+**Why inheritance**
+
+To solve Repeated Memory Space
+
+i.e.:
+
+```cpp
+struct Circle{
+    int x, y;
+    int radius;
+    void draw();
+};
+
+struct Square{
+    int x, y;
+    int width;
+    void draw();
+};
+
+int main(){
+    Circle circle[nc];
+    Square square[ns];
+    for(int i = 0; ++i < ns){
+        circle[i].draw();
+    }
+    ...
+    for(int i = 0; ++i < ns){
+        delete circle[i];
+    }
+    ...
+}
+```
+
+That is so complicated and a waste of space.
+
+**Inheritance**
+
+* Subclass
+
+>inherit behavior from the parent
+
+* Virtual
