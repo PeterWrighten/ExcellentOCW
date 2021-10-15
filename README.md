@@ -1,4 +1,10 @@
 # Excellent OCW
+{
+  "schemaVersion": 1,
+  "label": "License",
+  "message": "MIT",
+  "color": "orange"
+}
 This Repo would take notes for some OCW courses which I consider it is excellent.
 
 Course Code|HomePage|Assignment&Note
