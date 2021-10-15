@@ -2,7 +2,8 @@
 
 Lecture Note|Assignments
 --:|--:
-1. Introduction and Proofs  |  [AS]()
+1.Introduction and Proofs | [AS]()
+2.NumberTheory | [AS]()
 
 
 
