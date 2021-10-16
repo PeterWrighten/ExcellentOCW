@@ -47,5 +47,3 @@ D --> L(Lemma 2: Proof by #r and subset) --> H
 
 
 ```
-
-JDSK;LJD
