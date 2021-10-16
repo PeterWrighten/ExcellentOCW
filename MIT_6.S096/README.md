@@ -8,7 +8,10 @@ Assignment|Info|Solution
 --:|--:|--:
 [Compilation Pipeline](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.S096/README.md#lecture-1-compilation-pipeline)  |  [A1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/compilation-pipeline/) |[S1](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn1)
 [Core C](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.S096/README.md#lecture-2-core-c-control-structures-variables-scope-and-uninitialized-memory)  |  [A2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/core-c-control-structures-variables-scope-and-uninitialized-memory/) |  [S2](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn2)
-[C Memory Management]()  | [A3](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-memory-management/) |  [S3]()
+[C Memory Management](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-3-c-memory-management)  | [A3](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-memory-management/) |  [S3](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn3)
+[Data Structures, Debugging](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-4data-structures-debugging)  | [A4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/data-structures-debugging/)  | [S4](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn4)
+[C++ Introduction, Classes, and Templates](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-5-c-introduction-classes-and-templates)  | [A5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-introduction-classes-and-templates/)  | [S5](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn5)
+[C++ Inheritance](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-6-c-inheritance)  | [A6](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-inheritance/) | [S6]()  
 
 
 
@@ -21,7 +24,7 @@ Assignment|Info|Solution
 ### Lecture 1: [Compilation Pipeline](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/compilation-pipeline/)
 ![Hey](https://raw.githubusercontent.com/PeterWrighten/MarkDown_Photo/main/Hey.jpeg)
 
->Hey, guys, I'm Peter. Today I wanna review my C and C++ by MIT 6.S096. If you are also interested in this course, we could do it together, maybe by pull the issue(?).Well, let's get starded and keep learning.
+>Hey, guys, I'm Peter. Today I wanna review my C and C++ by MIT 6.S096. If you are also interested in this course, we could do it together, maybe by pull the issue(?).Well, let's get started and keep learning.
 
 C: A language to avoid writing Asembly Language.
 
