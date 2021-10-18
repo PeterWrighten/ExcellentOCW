@@ -871,3 +871,26 @@ int main(){
 ```
 
 * Virtual
+
+**Non-virtual functions are determined at compile-time.**
+
+```cpp
+class Shape{
+    void draw(){
+        printf("Shape\n");
+    }
+};
+class Circle:public Shape{
+    void draw(){
+        printf("Circle\n");
+    }
+};
+
+int main(){
+    Shape *shape = new Circle;
+    shape->draw(); //Shape
+}
+```
+**So it is compiled like a C call.**
+
+>C call is a reference method by passing arguments.
