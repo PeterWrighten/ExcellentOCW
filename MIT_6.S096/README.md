@@ -935,6 +935,8 @@ int main(){
 
 #### Virtual
 
+* Subclass re-defines Virtual Function: Override
+
 * Pure virtual methods
 
 ```cpp
@@ -951,3 +953,63 @@ int main(){
 //error: cannot declare variable 'shape' to be of abstract type 'Shape'
 //because the following virtual functions are pure within 'shape', virtual void Shape::draw();
 ```
+
+*********
+
+**Three Characters of OOP**
+
+1. Polymorphism-Pure Virtual
+2. Modularity-Class
+3. Inheritance-Subclass, Virtual
+
+************
+
+**Memory Layout**
+
+
+* Non-Virtual Function:
+
+
+
+```mermaid
+classDiagram
+
+class CodeChunk
+CodeChunk: func_a()
+
+CodeChunk: func_b()
+
+class Heap
+
+```
+
+```i.e```
+
+```cpp
+#include<stdio.h>
+class C{
+public:
+    int var;
+    void func_a();
+    void func_b();
+};
+
+```
+
+```mermaid
+classDiagram
+
+class CodeChunk
+
+
+```
+
+********
+
+**Pure Virtual Method**
+
+main Class would be defined as pure Virtual, and every derived Class have to define their function for themselves, to accomplish Polymorphism.
+
+Normal Virtual function -| if Not defined |-> generate as default argument
+
+Class including Pure virtual: Abstract Class
