@@ -1014,3 +1014,11 @@ main Class would be defined as pure Virtual, and every derived Class have to def
 Normal Virtual function -| if Not defined |-> generate as default argument
 
 Class including Pure virtual: Abstract Class
+
+**********
+
+>To understand virtual function deeply and code elegantly, I have to RESEARCH memory layout of C++ and its underlying structure. It is also a hardwork. Thus I prefer to accomplish it in Appendix, if you are also interested in it, Please Check [APPENDIX](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.S096/CPP.md).
+
+**Lecture 6 END**
+
+### Lecture 7:
