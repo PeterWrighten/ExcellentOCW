@@ -44,16 +44,108 @@ public:
 
 ```
 
-```mermaid
-classDiagram
-
-class CodeChunk
-
-
-```
-
 ********
 
+### C++ Memory Control
+
+* Smart Pointer
+
+In C++ 11, to avoid the case out of memory, it provided smart pointer to let us use.
+
+>Using RAII(Resource Acquisition Is Initialization) to make a pointer module as stack object to avoid "out of memory". That makes Smart pointer is actually a object, but pointer.
+
+1. ```std::shared_ptr```
+
+>This Function allowed memory shared by many objects together.
+
+```cpp
+#include<memory>
+
+//initialize shared_ptr
+std::shared_ptr<int> p3 = std::make_shared<int>(42);
+
+std::shared_ptr<string> p4 = std::make_shared<string>(10,'9');
+
+std::shared_ptr<int> p5 = std::make_shared<int>();
+
+//you could also use direct initialization
+
+std::shared_ptr<int> p6(new int(1024));// true
+std::shared_ptr<int> p7 = new int (1024);//false
+
+//Could not implicit a normal pointer
+std::shared_ptr<int> clone(int p){
+	return new int(p);//false, implicit cast
+	return std::shared_ptr<int>;//true
+}
+
+//The essence of "make_shared<typename>()" is "new".
+make_shared<T>(arg);
+shared_ptr<T> p(q); //p is clone of q. q's counter bumpup.
+p = q;//exchange
+p.use_count();// count the number of reference pointers
+p.unique();//if(p.use_count()==1){return true;}else{return false;}
+p.reset();//p.use_count() bumpdown
+p.reset(p);//?
+p.reset(p,d);//?
+```
+
+2. ```std::weak_ptr```
+
+>std::shared_ptr also has risk of "out of memory"
+
+**i.e.**
+
+```cpp
+#include<stdio.h>
+#include<memory>
+#include<iostream>
+using namespace std;
+
+class Child;
+class Parent{
+public:
+	Parent(){cout<<"Hi, Parent!"<<endl;};
+	~Parent(){cout<<"Bye, Parent!"<<endl;};
+	shared_ptr<Child> son;
+};
+
+class Child{
+public:
+	Child(){cout<<"Hi, Child!"<<endl;};
+	~Child(){cout<<"Bye, Child!"<<endl;};
+	shared_ptr<Parent> father;
+};
+
+int main(){
+	shared_ptr<Parent> parent(new Parent());
+	shared_ptr<Children> child(new Child());
+	parent->son = child;
+	child->father = parent;
+	return 0;
+}
+```
+
+If you implement code above, you would find destructors couldn't work, so out of memory. This is actually caused by ```shared_ptr``` has implemented a (bad) iterate so that ```use_count()``` could not return 0.
+
+>To solve this problem,we use ```weak_ptr```.
+
+```weak_ptr``` collaborates with ```shared_ptr``` but caused bumpup of counter.
+
+>Observer
+
+```cpp
+shared_ptr<int> p(new int());
+weak_ptr<int> wp(p);
+wp.lock()//return shared_ptr
+wp.expired();//if(w.use_count() == 0){return true;}else{return false;}
+```
+
+You have to use ```lock()``` to operate.
+
+3. ```unique_ptr```
+
+like ```shared_ptr```, but could not share.
 
 ## Polymorphism
 
