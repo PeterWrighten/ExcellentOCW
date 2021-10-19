@@ -964,49 +964,6 @@ int main(){
 
 ************
 
-**Memory Layout**
-
-
-* Non-Virtual Function:
-
-
-
-```mermaid
-classDiagram
-
-class CodeChunk
-CodeChunk:void func_a()
-
-CodeChunk:void func_b()
-
-class Heap
-Heap:int var
-
-```
-
-```i.e```
-
-```cpp
-#include<stdio.h>
-class C{
-public:
-    int var;
-    void func_a();
-    void func_b();
-};
-
-```
-
-```mermaid
-classDiagram
-
-class CodeChunk
-
-
-```
-
-********
-
 **Pure Virtual Method**
 
 main Class would be defined as pure Virtual, and every derived Class have to define their function for themselves, to accomplish Polymorphism.
