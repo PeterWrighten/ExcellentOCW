@@ -975,11 +975,12 @@ int main(){
 classDiagram
 
 class CodeChunk
-CodeChunk: func_a()
+CodeChunk:void func_a()
 
-CodeChunk: func_b()
+CodeChunk:void func_b()
 
 class Heap
+Heap:int var
 
 ```
 
