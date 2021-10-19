@@ -1,4 +1,4 @@
-# Appendix About C++
+# Appendix: C++
 
 ## The Memory layout
 
