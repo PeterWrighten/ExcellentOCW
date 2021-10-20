@@ -4,14 +4,16 @@
 
 ## Assignments
 
-Assignment|Info|Solution
+Lecture|Info|AssgnSolution
 --:|--:|--:
 [Compilation Pipeline](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.S096/README.md#lecture-1-compilation-pipeline)  |  [A1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/compilation-pipeline/) |[S1](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn1)
 [Core C](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.S096/README.md#lecture-2-core-c-control-structures-variables-scope-and-uninitialized-memory)  |  [A2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/core-c-control-structures-variables-scope-and-uninitialized-memory/) |  [S2](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn2)
 [C Memory Management](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-3-c-memory-management)  | [A3](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-memory-management/) |  [S3](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn3)
 [Data Structures, Debugging](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-4data-structures-debugging)  | [A4](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/data-structures-debugging/)  | [S4](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn4)
 [C++ Introduction, Classes, and Templates](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-5-c-introduction-classes-and-templates)  | [A5](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-introduction-classes-and-templates/)  | [S5](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn5)
-[C++ Inheritance](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-6-c-inheritance)  | [A6](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-inheritance/) | [S6]()
+[C++ Inheritance](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-6-c-inheritance)  | [A6](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/c-inheritance/) | [S6](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn6)
+[Assorted Topics 1](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-7-assorted-topics-1)  | [A7](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec7.pdf)  |  [S7](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn7)
+[Assorted Topics 2](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096#lecture-8-assorted-topics-2)  | [A8](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec8.pdf)  |  [S8](https://github.com/PeterWrighten/Excellent_OCW/tree/main/MIT_6.S096/assn8)
 
 
 
