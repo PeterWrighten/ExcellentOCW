@@ -978,4 +978,6 @@ Class including Pure virtual: Abstract Class
 
 **Lecture 6 END**
 
-### Lecture 7:
+### Lecture 7: [Assorted Topics](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec7.pdf)
+
+**Parent destructor**

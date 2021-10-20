@@ -147,6 +147,61 @@ You have to use ```lock()``` to operate.
 
 like ```shared_ptr```, but could not share.
 
+Not allowed to be copied.
+
+```cpp
+std::unique_ptr<int> ptr1(new int());
+std::unique_ptr<int> ptr2 = ptr1;//false
+std::unique_ptr<int> ptr3 = std::move(ptr1);//true
+```
+**C++11: No ```make_unique<>()``` function**
+
+```cpp
+unique_ptr<string> str1(new std::string("unique"));
+```
+
+**C++14: ```make_unique<>()``` function**
+
+```cpp
+unique_ptr<string> str1 = make_unique<string>("unique");
+
+unique_ptr<T> u1;//NULL unique_ptr pointed to T.
+unique_ptr<T,D> u2//u2 would use type D to release its pointer
+
+u = nullptr;
+u.release();//release pointers, and return NULL
+u.reset(p);//reset to point to p
+```
+
+
+
 ## Polymorphism
+**Reusable Interface**
+
+**One Interface, More Methods.**
+
+Compile-time Polymorphism: XXX(const XXX &obj):Static polymorphism :Early binding;
+
+Run-time Polymorphism:Virtual:Late binding;
+
+override: Subclass re-defined class.
+
+***************
+
+In C++,
+>Interface: Function declaration;
+
+>Implementation: define of function used scop resolution operator.
+
+Hiden:
+
+1. same var, No virtual declaration
+2. different var, have/no virtual delaration
+
+
+Override: same var, virtual declaration;
+
+
+
 
 ## OOP
