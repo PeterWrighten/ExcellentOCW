@@ -11,8 +11,8 @@ Firstly, I wanna discuss the type and difference of variable memory used in C++.
 |  |Object|Memory Location
 |:--:|:--:|:--:|
 |**Static Memory**| Static var,obj; func defined outside scope  | **Static Memory**  |
-|**Dynamic Memory**  | Ptr var; dynamically allocated var  |  **Heap** |
-| **Stack Memory**  | Local var  | **Stack**  |
+|**Dynamic Memory(Compile-Time)**  | Ptr var; dynamically allocated var  |  **Heap** |
+| **Stack Memory(Run-Time)**  | Local var  | **Stack**  |
 
 
 
@@ -45,6 +45,8 @@ public:
 ```
 
 ********
+
+
 
 ### C++ Memory Control
 
@@ -173,7 +175,59 @@ u.release();//release pointers, and return NULL
 u.reset(p);//reset to point to p
 ```
 
+### Object Model
 
+[**C++ Memory Layout (Chinese)**](https://www.cnblogs.com/qg-whz/p/4909359.html)
+
+```i.e```
+>1. Non-inheritance case
+```cpp
+class A{
+public:
+	virtual void vfunc1();
+	virtual void vfunc2();
+	void func1();
+	void func2();
+private:
+	int m_data1, m_data2;
+};
+```
+
+Above Code Chunk's Memory layout:
+
+![](https://raw.githubusercontent.com/PeterWrighten/MarkDown_Photo/main/Note/C1.jpg)
+
+>2. Inheritance case
+
+```cpp
+class A{
+public:
+	virtual void vfunc1(){};
+	virtual void vfunc2(){};
+	void func1(){};
+	void func2(){};
+private:
+	int m_data1, m_data2;
+};
+
+class B:public A{
+	virtual void vfunc1(){};
+	void func2();
+private:
+	int m_data3;
+};
+
+class C:public B{
+	virtual void vfunc1(){};
+	void func();
+private:
+	int m_data1, m_data4;
+
+};
+```
+Above Code Chunk's Memory layout:
+
+![](https://raw.githubusercontent.com/PeterWrighten/MarkDown_Photo/main/Note/C2.JPG)
 
 ## Polymorphism
 **Reusable Interface**
@@ -203,5 +257,13 @@ Override: same var, virtual declaration;
 
 
 
+**Memo**
+>About ```typedef```
+```cpp
+typedef char(*Fun)(int);
+//typedef returnType (Typename)(Parameter)
+```
+
+***************
 
 ## OOP
