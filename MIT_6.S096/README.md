@@ -981,3 +981,67 @@ Class including Pure virtual: Abstract Class
 ### Lecture 7: [Assorted Topics](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec7.pdf)
 
 **Parent destructor**
+
+```c
+FILE *file(const char *filename, const char *mode);
+//filename-This is the C string containing the name of the file to be opened
+//mode-This is the C string containing a file access mode.
+```
+
+**fopen\'s mode**
+
+* "r": Opens a file for reading.
+* "w": Create an empty file for writing.
+* "a": Append to the file.
+* "r+": Opens a file for both reading and writing.
+* "w+": Create an empty file for both reading and writing.
+* "a+": Opens a file for reading and append
+
+***************
+
+Actually, the note still talks about ```virtual```
+
+* Case 1:
+
+```cpp
+struct Buffer{
+public:
+    Buffer(int s){};
+    ~Buffer(){};
+};
+struct FBuffer:public Buffer{
+public:
+    FBuffer(int s){};
+    ~FBuffer(){};
+};
+
+int main(){
+    Buffer *fbuf = new FBuffer(128);
+    delete fbuf;//false!!,~FBuffer() is not called
+    //Because Non-Virtual, could not dynamic binding.
+}
+```
+
+* Case 2:
+
+```cpp
+struct Buffer{
+public:
+    Buffer(int s){};
+    virtual ~Buffer(){};
+};
+struct FBuffer:public Buffer{
+public:
+    FBuffer(int s){};
+    virtual ~FBuffer(){};
+};
+
+int main(){
+    Buffer *fbuf = new FBuffer(128);
+    delete fbuf;//True!!
+    //Virtual Func is called by vptbl,
+    // so could dynamic binding.(Polymorphism)
+}
+```
+
+**C++ Cast**
