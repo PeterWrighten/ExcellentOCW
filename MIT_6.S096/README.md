@@ -2,7 +2,7 @@
 
 [IntroC](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/)
 
-## Assignments
+## Syllabus
 
 Lecture|Info|AssgnSolution
 --:|--:|--:
@@ -1059,12 +1059,80 @@ int a = int(b);
 
 **In C++**
 
-* dynamic_cast
+* down-cast: Base->Subclass
+* up-cast: Subclass->Base
+
+**down-cast**
+
+invalid down-cast:
+
+```cpp
+class Cat{virtual ~Cat(){}};
+class Tiger:public Cat{virtual ~Tiger(){}};
+class Persian:public Cat{virtual ~Persion(){}};
+Cat *c = new Persian;
+Tiger *t1 = (Tiger *)c;//error
+Tiger *t2 = static_cast<Tiger *>(c);//error
+Tiger *t3 = dynamic_cast<Tiger *>(c);//NULL
+//Because Tiger and Persian are all subclass of Cat, so their func_set would be different. So their memory space could not be casted for each other.
+```
+
+[**ref**](https://www.yunabe.jp/docs/cpp_casts.html)
+* dynamic_cast(Polymorphism, ```Base Class``` Must have ```virtual``` func.)
+
+−This cast is used for handling polymorphism. You only need to use it when you are casting to a derived class. This is exclusively to be used in inheritence when you cast from base class to derived class.
+
+親クラスの型のポインタを子クラスのポインタにキャストするときに利用します。 この際、その親クラスの型のポインタが指すオブジェクトの実体のクラスがキャスト先のクラスであることを確認されます。 ポインタが指す実体がキャスト先のクラスまたはその子孫クラスである場合はポインタはそのまま使われますが、 そうでなくキャスト先のクラスとして使用できない場合には```NULL```(```nullptr```)に置き換えられます。
+
+```dynamic_cast```を行うためには、型情報がポインタから得られる必要があります。つまりクラスはpolymorphicである必要があります。 つまり親クラスは最低でも 1 つのvirtualな関数が親クラスに定義されていてvtableが存在しなくてはなりません。
+
 
 
 
 * static_cast
+Cast datatype mandorily.
 
+− This is used for the normal/ordinary type conversion. This is also the cast responsible for implicit type coersion and can also be called explicitly. You should use it in cases like converting float to int, char to int, etc.
+
+ある型からある型への暗黙の変換が存在する時に(たとえばintからdoubleなど)、そこで暗黙の変換が行われることを明示する場合に行います。 多くの場合はstatic_castは省略することが可能です。
+
+```cpp
+T1 obj1;
+T2 obj2 = static_cast<T1>(obj1);
+```
+
+
+**C++ Reference**
+
+* Reference looks like pointer, but not a pointer;
+* int& r != NULL, but int *ptr==NULL => OK;
+* Reference's point direction could not be changed
+* initialized inflexibly
+
+```cpp
+void swap(int *a, int *b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+int main(){
+    int x = 2, y = 3;
+    swap(&x, &y);
+}
+```
+
+```cpp
+void swap(int &a, int &b){
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+int main(){
+    int x = 2, y = 3;
+    swap(x,y);
+}
+```
 
 
 ### Lecture 8: [Assorted Topics 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec8.pdf)
