@@ -978,7 +978,7 @@ Class including Pure virtual: Abstract Class
 
 **Lecture 6 END**
 
-### Lecture 7: [Assorted Topics](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec7.pdf)
+### Lecture 7: [Assorted Topics 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec7.pdf)
 
 **Parent destructor**
 
@@ -1045,3 +1045,226 @@ int main(){
 ```
 
 **C++ Cast**
+
+```c
+//C cast
+char *buf = (char *)malloc(128);
+
+//C-style cast
+float b = 98.6;
+int a = int(b);
+```
+
+**In C++**
+
+* dynamic_cast
+
+
+
+* static_cast
+
+
+
+### Lecture 8: [Assorted Topics 2](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec8.pdf)
+
+**STL:Standard Template Library**
+
+* "Included" w/compiler
+* Contains containers/data structures, iterators and algorithms.
+
+**Vectors(Like Linked list and Stack)**
+
+* equivalent to array lists(dynamic size)
+```cpp
+ #include <vector>
+std::vector<int> int_list;
+int_list.push_back(1);
+int temp = int_list[0];//temp = 1;
+int_list.pop_back();//int_list NULL
+```
+
+**MAP(Like Hash Table & Dictionary)**
+
+```cpp
+#include<map>
+std::map<char, int> letter_to_int;
+letter_to_int['a']=1;
+letter_to_int['b']=2;
+...
+int pos = letter_to_int['a'];//pos = 1;
+```
+
+**Other Containers**
+- < array>: array w/ functions
+– < list>: doubly linked list
+– < set>: stores only unique elements, tree
+implementation
+– <unordered_map>: actual hash table
+– <unordered_set>: stores only unique
+elements, hash table implementation
+– Look online for more!
+
+**Iterators**
+```Def```
+
+In computer programming, an iterator is an object that enables a programmer to traverse a container, particularly lists
+
+>vector iterator
+
+```cpp
+#include<vector>
+#include<iostream>
+
+std::vector<int> vec;
+for(int i = 1; i <= 5; i++){
+    vec.push_back(i);
+}
+for(std::vector<int>::iterator it = vec.begin(); it!=vec.end();++it){
+    std::cout<<''<<*it;
+    //it is like a pointer.
+}
+```
+
+**Useful Algorithm**
+
+>```#include<algorithm>```
+
+```cpp
+#include<algorithm>
+std::sort(vec.begin(), vec.end());//Sort a vec
+
+std::reverse(vec.begin(),vec.end());//Reverse a vec
+
+std::min(a, b); std::max(a, b);//max/min
+
+```
+
+**Const Maddness**
+
+```cpp
+const int a == int const a;//const varaible
+const int *a; //pointer to const int
+int * const a; //const pointer to variable int;
+```
+
+* Const functions are safe for const objects, but can be called by all objects. Non-const functions can only be called by non-const objects.
+
+**Exceptions**
+
+```Def```
+
+Exceptions are "error" objects that are "thrown" when things go bad.
+
+* Exception parent object in std::exception
+- std::runtime_error
+- std::bad_alloc
+- std::bad_cast
+
+
+- Can create your own custom exceptions
+
+```cpp
+class MyException:public exception{
+    const char *what()const{
+        return "MyException";//Human_readable
+    }
+};
+```
+[Try and Catch](https://www.w3schools.com/cpp/cpp_exceptions.asp)
+
+When executing C++ code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.
+
+When an error occurs, C++ will normally stop and generate an error message. The technical term for this is: C++ will throw an exception (throw an error).
+
+* try: test some code;
+* throw: throw exceptions;
+* catch: catch error and do something about it.
+
+Like a web server:
+
+>PseudoCode
+
+```cpp
+try{
+    request page;
+    if(receiveFile == NULL){
+        throw 404
+    }
+}
+catch(int myNum){
+    cout<<"Error Number:\t"<<myNum;
+}
+```
+
+**Three ways to throw**
+
+1. Primitive throw
+
+```cpp
+try{
+    ...
+    throw 23
+}catch(int e){
+    cout<<e;
+}
+```
+
+2. Function add throw
+
+```cpp
+void ahh(int i) throw(){
+    //conditions not to be thrown
+}
+
+void sss(int i) throw(int){
+    //define here
+    //func would throw an int if there is an error
+}
+```
+
+**Func Pointers**
+
+Like ```typedef``` in C.
+
+```cpp
+#include<iostream>
+using namespace std;
+void demo(int x){
+    cout<<x<<endl;
+}
+
+int main(){
+    void(*foo)(int);
+    foo = &demo//ampersand is optional
+    (*foo)(2);
+    foo(2);//same as above line.
+    return 0;
+}
+```
+
+**For each**
+
+```cpp
+#include<algorithm>//necessary
+#include<vector>
+#include<iostream>
+using namespace std;
+
+int main(){
+vector<int> myvec;
+myvec.push_back(10);
+myvec.push_back(20);
+for_each(myvec.begin(), myvec.end(),print);
+}
+
+```
+
+[More C++ 11 Features](https://www.cprogramming.com/tutorial.html#c++11)
+
+**Lecture 8 END**
+
+![](https://raw.githubusercontent.com/PeterWrighten/MarkDown_Photo/main/Love.jpeg)
+
+>Thanks for you to get along with me untill now. And also hope that my notes could help you out!
+
+>Take care, and keep learning!

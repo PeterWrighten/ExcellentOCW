@@ -197,6 +197,7 @@ Above Code Chunk's Memory layout:
 
 ![](https://raw.githubusercontent.com/PeterWrighten/MarkDown_Photo/main/Note/C1.jpg)
 
+
 >2. Inheritance case
 
 ```cpp
@@ -228,6 +229,12 @@ private:
 Above Code Chunk's Memory layout:
 
 ![](https://raw.githubusercontent.com/PeterWrighten/MarkDown_Photo/main/Note/C2.JPG)
+
+
+**********
+
+[**Moreover**](https://www.cnblogs.com/qg-whz/p/4909359.html)
+***********
 
 ## Polymorphism
 **Reusable Interface**
