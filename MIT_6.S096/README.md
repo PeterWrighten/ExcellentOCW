@@ -982,6 +982,24 @@ Class including Pure virtual: Abstract Class
 
 ### Lecture 7: [Assorted Topics 1](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/MIT6_S096_IAP13_lec7.pdf)
 
+
+**Namespace**
+
+```cpp
+namespace std{
+    extern istream cin;//extern: prevent vars repeat
+    extern ostream cout;
+    ...;
+}
+
+```
+**Why "extern"**
+when C proj compile, duplicate symbol error.
+
+**Operator Overriding**
+
+[Note](https://www.geeksforgeeks.org/operator-overloading-c/)
+
 **Parent destructor**
 
 ```c
