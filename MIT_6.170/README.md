@@ -160,3 +160,18 @@ The object's location is called a reference.
 == compares the references.
 
 JAVA's reference has exactly allocated memory for objects, so you need not to allocate for variables like C/C++.
+
+**Only method-level 'servings' is updated**
+
+```java
+public class Baby{
+	int servings;
+	void feed(int servings){
+		servings = servings + servings;
+	}
+	void poop(){
+		System.out.println("All Better!");
+		servings = 0;
+	}
+}
+```
