@@ -1,5 +1,3 @@
-package hello;
-import java.lang.System;
 
 class HelloWorld{
 	String myString;
@@ -9,6 +7,7 @@ class HelloWorld{
 	}
 
 	public static void main(String[] args){
+		//Program execution begins here
 		HelloWorld myHelloWorld = new HelloWorld();
 		myHelloWorld.shout();
 	}
