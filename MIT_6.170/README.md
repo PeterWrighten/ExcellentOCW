@@ -167,7 +167,7 @@ JAVA's reference has exactly allocated memory for objects, so you need not to al
 public class Baby{
 	int servings;
 	void feed(int servings){
-		servings = servings + servings;
+		servings = servings + servings;//method "feed"'s servings.
 	}
 	void poop(){
 		System.out.println("All Better!");
@@ -175,3 +175,25 @@ public class Baby{
 	}
 }
 ```
+
+use "this", could update object-level servings
+
+```java
+public class Baby{
+	int servings;
+	void feed(int servings){
+		this.servings = this.servings + servings;
+	}
+	void poop(){
+		System.out.println("All Better!");
+		servings = 0;
+	}
+}
+```
+
+**Package**
+
+* Each class belongs to a package.
+* Classes in the same package serve a similar purpose.
+* Packages are just directories.
+* Classes in other package need to be imported.
