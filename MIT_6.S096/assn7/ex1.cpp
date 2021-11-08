@@ -3,11 +3,12 @@
 
 struct Buffer{
 public:
+	char *buf;
 	Buffer(int s){
 		buf = new char[s];;
 	}
 	~Buffer(){delete [] buf;};
-	char *buf;
+
 };
 
 struct FBuffer: public Buffer{
