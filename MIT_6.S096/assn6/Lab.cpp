@@ -22,6 +22,7 @@ void Children::Function2(){
     printf("This is children, Function2\n");
 }
 
+
 int main(){
     Parent *p = new Children;
     p->Function1();//C call compiled. This is parent, Function1
