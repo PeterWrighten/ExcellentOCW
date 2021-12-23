@@ -1,0 +1,1 @@
+# [MIT 6.050J: Information Theory](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-050j-information-and-entropy-spring-2008/index.htm) 
