@@ -6,7 +6,7 @@ This Repo would take notes for some MIT OCW courses which I consider it is excel
 Course Code|HomePage|Assignment&Note
 --:|--:|--:
 [Done]~~MIT 6.S096~~ | [IntroC](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-s096-introduction-to-c-and-c-january-iap-2013/lectures-and-assignments/)  |[AN](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.S096/README.md)
-MIT 18.01| [SCal](https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/index.htm)|[AN](./MIT_18.01/README.md))
+MIT 18.01| [SCal](https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/index.htm)|[AN](./MIT_18.01/README.md)
 MIT 18.02| [MCal](https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/)|[AN](./MIT_18.02/README.md)
 MIT 6.050J | [InfoT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-050j-information-and-entropy-spring-2008/index.htm)|[AN](./MIT_6.050J/README.md)
 UCB CS70 | [DiscM/ProbT](https://www.eecs70.org)|[AN](./UCB_CS70/README.md)
