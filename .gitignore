@@ -1,2 +1,10 @@
 
 **/.DS_Store
+
+**/.vscode
+
+**/.idea
+
+**/*.exe
+
+**/*.pdb
