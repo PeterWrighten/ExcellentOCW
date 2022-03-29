@@ -11,7 +11,7 @@ MIT 18.02| [MCal](https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-
 MIT 6.050J | [InfoT](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-050j-information-and-entropy-spring-2008/index.htm)|[AN](./MIT_6.050J/README.md)
 UCB CS70 | [DiscM/ProbT](https://www.eecs70.org)|[AN](./UCB_CS70/README.md)
 UCB CS126 | [ProbT](https://inst.eecs.berkeley.edu/~ee126/fa20/content.html) | [AN](./UCB_CS126/README.md)
-MIT WEB LAB|[WL](https://weblab.mit.edu/schedule/)| [AN](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_WEB_LAB/README.md)
+MIT WEB LAB|[WL](https://weblab.mit.edu/schedule/)| [AN](https://github.com/PeterWrighten/web_dev)
 MIT 6.006  | [DSA](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/index.htm)  |  [AN](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT%206.006/README.md)
 MIT 6.170  |[JAVA](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-170-software-studio-spring-2013/)   |  [AN](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.170/README.md)
 MIT 6.042J | [MS](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/)  | [AN](https://github.com/PeterWrighten/Excellent_OCW/blob/main/MIT_6.042J/README.md)
